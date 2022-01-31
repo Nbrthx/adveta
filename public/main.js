@@ -13,7 +13,7 @@ var config = {
 var game = new Phaser.Game(config)
 
 function preload(){
-    game.load.spritesheet("vguy", "maxplat/virtualguy/run.png", { frameWidth: 512, frameHeight: 512 })
+    game.load.spritesheet("vguy", "//iili.io/l48pta.png", { frameWidth: 512, frameHeight: 512 })
 }
 
 var vguy;
