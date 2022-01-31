@@ -1,0 +1,14 @@
+{
+  "name": "adveta",
+  "version": "1.0.0",
+  "description": "An express application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ektada Benabi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
