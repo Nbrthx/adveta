@@ -27,7 +27,7 @@ function create(){
         repeat: -1
     })
     
-    vguy = this.add.sprite(32, 384, "vguy")
+    vguy = this.add.sprite(20, 40, "vguy")
     vguy.play("idle")
 }
 
