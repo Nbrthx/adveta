@@ -19,15 +19,15 @@ function preload(){
 var vguy;
 
 function create(){
-    game.anims.create({
-        key: "run",
+    this.anims.create({
+        key: "idle",
         frameRate: 7,
-        frames: game.anims.generateFrameNumbers("vguy", { start: 0, end: 11 }),
+        frames: this.anims.generateFrameNumbers("vguy", { start: 0, end: 10 }),
         repeat: -1
     })
     
-    vguy = game.add.sprite(32, 384, "vguy")
-    vguy.play("run")
+    vguy = this.add.sprite(32, 384, "vguy")
+    vguy.play("idle")
 }
 
 function update(){
