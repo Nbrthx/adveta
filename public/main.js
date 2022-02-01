@@ -1,8 +1,9 @@
 var config = {
     type: Phaser.AUTO,
     parent: "root",
-    width: 800,
-    height: 500,
+    width: 512,
+    height: 288,
+    pixelArt: true,
     scene: {
         preload: preload,
         create: create,
