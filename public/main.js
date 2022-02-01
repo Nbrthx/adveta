@@ -21,7 +21,7 @@ var vguy;
 function create(){
     this.anims.create({
         key: "idle",
-        frameRate: 7,
+        frameRate: 12,
         frames: this.anims.generateFrameNumbers("vguy", { start: 0, end: 10 }),
         repeat: -1
     })
