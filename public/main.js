@@ -13,18 +13,15 @@ var config = {
 var game = new Phaser.Game(config)
 
 function preload(){
-    console.log("game: "+game)
-    console.log("preload: "+this)
     this.load.spritesheet("vguy", "https://iili.io/l48pta.png", { frameWidth: 32, frameHeight: 32 })
 }
 
 var vguy;
 
 function create(){
-    console.log("create: "+this)
     this.anims.create({
         key: "idle",
-        frameRate: 16,
+        frameRate: 20,
         frames: this.anims.generateFrameNumbers("vguy", { start: 0, end: 10 }),
         repeat: -1
     })
