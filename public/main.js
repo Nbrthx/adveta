@@ -15,9 +15,9 @@ var game = new Phaser.Game(config)
 
 function preload(){
     this.load.spritesheet("vguy", "https://iili.io/l48pta.png", { frameWidth: 32, frameHeight: 32 })
-    this.load.spritesheet("vjoy_cap", "https://zippyimage.com/images/2022/02/01/538467315cc4c0e6d727c06560d8a962.png")
-    this.load.spritesheet(" vjoy_body", "https://zippyimage.com/images/2022/02/01/3968c8481e789d2de8030abb1758e4a7.png")
-    this.load.spritesheet("vjoy_base", "https://zippyimage.com/images/2022/02/01/93e986475547e546ba04341fcb9c1708.png")
+    this.load.image("vjoy_cap", "https://zippyimage.com/images/2022/02/01/538467315cc4c0e6d727c06560d8a962.png")
+    this.load.image("vjoy_body", "https://zippyimage.com/images/2022/02/01/3968c8481e789d2de8030abb1758e4a7.png")
+    this.load.image("vjoy_base", "https://zippyimage.com/images/2022/02/01/93e986475547e546ba04341fcb9c1708.png")
 }
 
 var vguy;
@@ -34,7 +34,7 @@ function create(){
     vguy.play("idle")
 
     this.vjoy = game.plugins.add(Phaser.Plugin.VJoy);
-    this.vjoy.inputEnable(0, 0, 400, 600);
+    this.vjoy.inputEnable(0, 0, 400, 400);
     this.vjoy.speed = {
       x:500,
       y:500
