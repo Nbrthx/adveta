@@ -34,7 +34,7 @@ function create(){
     vguy.play("idle")
 
     this.vjoy = game.plugins.add(Phaser.Plugin.VJoy);
-    this.vjoy.inputEnable(0, 0, 400, 400);
+    this.vjoy.inputEnable(0, 0, 288, 512);
     this.vjoy.speed = {
       x:500,
       y:500
