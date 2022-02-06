@@ -53,7 +53,7 @@
     y1 = y1 || 0;
     x2 = x2 || this.game.width;
     y2 = y2 || this.game.height;
-    this.zone = new Phaser.GameObjects.Rectangle(x1, y1, x2, y2);
+    this.zone = new Phaser.Geom.Rectangle(x1, y1, x2, y2);
     this.input.onDown.add(createCompass, this);
   };
 
