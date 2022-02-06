@@ -33,20 +33,19 @@ function create(){
     vguy.play("idle")
     
     this.joyStick = this.plugins.get("rexvirtualjoystickplugin").add(this, {
-                x: 400,
-                y: 300,
-                radius: 100,
-                base: this.add.circle(0, 0, 100, 0x888888),
-                thumb: this.add.circle(0, 0, 50, 0xcccccc),
-                // dir: '8dir',   // 'up&down'|0|'left&right'|1|'4dir'|2|'8dir'|3
-                // forceMin: 16,
-                // enable: true
-            })
-            .on('update', this.dumpJoyStickState, this);
+        x: 400,
+        y: 300,
+        radius: 100,
+        base: this.add.circle(0, 0, 100, 0x888888),
+        thumb: this.add.circle(0, 0, 50, 0xcccccc),
+        // dir: '8dir',   // 'up&down'|0|'left&right'|1|'4dir'|2|'8dir'|3
+        // forceMin: 16,
+        // enable: true
+    })
+    .on('update', this.dumpJoyStickState, this);
 
-        this.text = this.add.text(0, 0);
-        this.dumpJoyStickState();
-    }
+    this.text = this.add.text(0, 0);
+    this.dumpJoyStickState();
 }
 
 function update(){
