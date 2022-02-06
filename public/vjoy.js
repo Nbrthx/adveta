@@ -27,7 +27,7 @@
     });
   };
 
-  Phaser.Plugins.VJoy.prototype = Object.create(Phaser.Plugins.prototype);
+  Phaser.Plugins.VJoy.prototype = Object.create(Phaser.Plugins.VJoy.prototype);
   Phaser.Plugins.VJoy.prototype.constructor = Phaser.Plugins.VJoy;
 
   Phaser.Plugins.VJoy.prototype.settings = {
