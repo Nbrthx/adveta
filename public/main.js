@@ -15,9 +15,10 @@ var game = new Phaser.Game(config)
 
 function preload(){
     this.load.spritesheet("vguy", "https://iili.io/l48pta.png", { frameWidth: 32, frameHeight: 32 })
-    this.load.image("vjoy_cap", "https://zippyimage.com/images/2022/02/01/538467315cc4c0e6d727c06560d8a962.png")
-    this.load.image("vjoy_body", "https://zippyimage.com/images/2022/02/01/3968c8481e789d2de8030abb1758e4a7.png")
-    this.load.image("vjoy_base", "https://zippyimage.com/images/2022/02/01/93e986475547e546ba04341fcb9c1708.png")
+   
+    this.load.image("vjoy_cap", "https://i.ibb.co/6R2knRs/base.png")
+    this.load.image("vjoy_body", "https://i.ibb.co/KbJVTQ9/body.png")
+    this.load.image("vjoy_base", "https://i.ibb.co/7RGGVmB/cap.png")
 }
 
 var vguy;
