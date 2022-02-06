@@ -31,18 +31,21 @@ function create(){
     vguy.play("idle")
     
     this.joyStick = new rexvirtualjoystickplugin(this, {
-        x: 100,
-        y: 100,
+        x: 800,
+        y: 800,
         radius: 100,
         base: this.add.circle(0, 0, 80, 0x888888),
         thumb: this.add.circle(0, 0, 40, 0xcccccc),
     })
 
     this.text = this.add.text(0, 0);
-    var s = 'Force: ${Math.floor(this.joyStick.force * 100) / 100}\n Angle: ${Math.floor(this.joyStick.angle * 100) / 100}';
-    this.text.setText(s)
 }
 
 function update(){
-    
+    var s = 'Force: 
+        ${Math.floor(this.joyStick.force * 100) / 100}
+        Angle: 
+        ${Math.floor(this.joyStick.angle * 100) / 100}
+        ';
+    this.text.setText(s)
 }
