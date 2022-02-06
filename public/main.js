@@ -34,7 +34,7 @@ function create(){
     vguy = this.add.sprite(20, 40, "vguy")
     vguy.play("idle")
 
-    this.vjoy = this.plugins.add(Phaser.Plugin.VJoy);
+    this.vjoy = this.plugins.add(Phaser.Plugins.VJoy);
     this.vjoy.inputEnable(0, 0, 288, 512);
     this.vjoy.speed = {
       x:500,
