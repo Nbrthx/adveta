@@ -33,25 +33,8 @@ function create(){
     
     vguy = this.add.sprite(20, 40, "vguy")
     vguy.play("idle")
-
-    this.vjoy = Phaser.Plugins.VJoy.prototype
-    this.vjoy.inputEnable(0, 0, 288, 512);
-    this.vjoy.speed = {
-      x:500,
-      y:500
-    }
 }
 
 function update(){
-    var cursors = this.vjoy.cursors;
-      if (cursors.left) {
-        vguy.x--;
-      } else if (cursors.right) {
-        vguy.x++;
-      }
-      if (cursors.up) {
-        vguy.y--;
-      } else if (cursors.down) {
-        vguy.y++;
-      }
+    
 }
