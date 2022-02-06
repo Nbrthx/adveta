@@ -4,11 +4,11 @@
   'use strict';
 
   /**
-   * Virtual Joystick plugin for Phaser.io
+   * Virtual Joystick Plugins for Phaser.io
    */
 
-  Phaser.Plugin.VJoy = function (game, parent) {
-    Phaser.Plugin.call(this, game, parent);
+  Phaser.Plugins.VJoy = function (game, parent) {
+    Phaser.Plugins.call(this, game, parent);
 
     this.isInTheZone = isInsideTheZone.bind(this);
 
@@ -27,28 +27,28 @@
     });
   };
 
-  Phaser.Plugin.VJoy.prototype = Object.create(Phaser.Plugin.prototype);
-  Phaser.Plugin.VJoy.prototype.constructor = Phaser.Plugin.VJoy;
+  Phaser.Plugins.VJoy.prototype = Object.create(Phaser.Plugins.prototype);
+  Phaser.Plugins.VJoy.prototype.constructor = Phaser.Plugins.VJoy;
 
-  Phaser.Plugin.VJoy.prototype.settings = {
+  Phaser.Plugins.VJoy.prototype.settings = {
     maxDistanceInPixels: 200,
     singleDirection: false
   };
 
 
-  Phaser.Plugin.VJoy.prototype.cursors = {
+  Phaser.Plugins.VJoy.prototype.cursors = {
     up: false,
     down: false,
     left: false,
     right: false
   };
 
-  Phaser.Plugin.VJoy.prototype.speed = {
+  Phaser.Plugins.VJoy.prototype.speed = {
     x: 0,
     y: 0
   };
 
-  Phaser.Plugin.VJoy.prototype.inputEnable = function (x1, y1, x2, y2) {
+  Phaser.Plugins.VJoy.prototype.inputEnable = function (x1, y1, x2, y2) {
     x1 = x1 || 0;
     y1 = y1 || 0;
     x2 = x2 || this.game.width;
@@ -57,7 +57,7 @@
     this.input.onDown.add(createCompass, this);
   };
 
-  Phaser.Plugin.VJoy.prototype.inputDisable = function () {
+  Phaser.Plugins.VJoy.prototype.inputDisable = function () {
     this.input.onDown.remove(createCompass, this);
     this.input.onUp.remove(removeCompass, this);
   };
@@ -157,6 +157,6 @@
     }, this);
   };
 
-  Phaser.Plugin.VJoy.prototype.preUpdate = empty;
+  Phaser.Plugins.VJoy.prototype.preUpdate = empty;
 
 }.call(this, window, Phaser));
