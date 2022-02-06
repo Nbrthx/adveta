@@ -16,9 +16,7 @@ var game = new Phaser.Game(config)
 function preload(){
     this.load.spritesheet("vguy", "https://iili.io/l48pta.png", { frameWidth: 32, frameHeight: 32 })
    
-    this.load.image("vjoy_cap", "https://i.ibb.co/6R2knRs/base.png")
-    this.load.image("vjoy_body", "https://i.ibb.co/KbJVTQ9/body.png")
-    this.load.image("vjoy_base", "https://i.ibb.co/7RGGVmB/cap.png")
+    this.load.plugin("rexvirtualjoystickplugin")
 }
 
 var vguy;
@@ -33,6 +31,22 @@ function create(){
     
     vguy = this.add.sprite(20, 40, "vguy")
     vguy.play("idle")
+    
+    this.joyStick = this.plugins.get("rexvirtualjoystickplugin").add(this, {
+                x: 400,
+                y: 300,
+                radius: 100,
+                base: this.add.circle(0, 0, 100, 0x888888),
+                thumb: this.add.circle(0, 0, 50, 0xcccccc),
+                // dir: '8dir',   // 'up&down'|0|'left&right'|1|'4dir'|2|'8dir'|3
+                // forceMin: 16,
+                // enable: true
+            })
+            .on('update', this.dumpJoyStickState, this);
+
+        this.text = this.add.text(0, 0);
+        this.dumpJoyStickState();
+    }
 }
 
 function update(){
