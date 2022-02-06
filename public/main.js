@@ -1,8 +1,8 @@
 var config = {
     type: Phaser.AUTO,
     parent: "root",
-    width: 512,
-    height: 288,
+    width: 640,
+    height: 360,
     pixelArt: true,
     scene: {
         preload: preload,
@@ -31,11 +31,11 @@ function create(){
     vguy.play("idle")
     
     this.joyStick = new rexvirtualjoystickplugin(this, {
-        x: 400,
-        y: 300,
+        x: 100,
+        y: 100,
         radius: 100,
-        base: this.add.circle(0, 0, 100, 0x888888),
-        thumb: this.add.circle(0, 0, 50, 0xcccccc),
+        base: this.add.circle(0, 0, 80, 0x888888),
+        thumb: this.add.circle(0, 0, 40, 0xcccccc),
     })
 
     this.text = this.add.text(0, 0);
