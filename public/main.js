@@ -42,10 +42,7 @@ function create(){
 }
 
 function update(){
-    var s = 'Force: 
-        ${Math.floor(this.joyStick.force * 100) / 100}
-        Angle: 
-        ${Math.floor(this.joyStick.angle * 100) / 100}
-        ';
+    var s = 'Force: '+Math.floor(this.joyStick.force * 100) / 100+
+        '\nAngle: '+Math.floor(this.joyStick.angle * 100) / 100;
     this.text.setText(s)
 }
